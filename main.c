@@ -48,4 +48,19 @@ int main(int argc, char *argv[]) {
 
     // po_file_write(file, argv[2], &handler);
     printf("header:\n%s\n", po_file_domain_header(file, "messages"));
+
+    po_message_iterator_t iter = po_message_iterator(file, NULL);
+    {
+        po_message_t msg = po_next_message(iter);
+        printf("msg: %s\n", msg);
+        printf("  msgid: %s\n", po_message_msgid(msg));
+        printf("  msgstr: %s\n", po_message_msgid(msg));
+    }
+
+    {
+        po_message_t msg = po_next_message(iter);
+        printf("msg: %s\n", msg);
+        printf("  msgid: %s\n", po_message_msgid(msg));
+        printf("  msgstr: %s\n", po_message_msgid(msg));
+    }
 }
