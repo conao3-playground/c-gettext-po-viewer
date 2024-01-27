@@ -1,5 +1,6 @@
 #include <stdio.h>
 
-int main(void) {
+int main(int argc, char *argv[]) {
     printf("Hello, world!\n");
+    printf("argc = %d, argv[0] = %s, argv[1] = %s\n", argc, argv[0], argv[1]);
 }
