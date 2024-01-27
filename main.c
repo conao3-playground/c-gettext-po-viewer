@@ -45,4 +45,7 @@ int main(int argc, char *argv[]) {
     const char * const * domains = po_file_domains(file);
     printf("domains[0] = %s\n", domains[0]);
     printf("domains[1] = %s\n", domains[1]);
+
+    // po_file_write(file, argv[2], &handler);
+    printf("header:\n%s\n", po_file_domain_header(file, "messages"));
 }
